@@ -1,0 +1,8 @@
+[[redirects]]
+  from = "/*"
+  to = "https://dev16718.service-now.com/:splat"
+  status = 200
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"
+    X-Api-Key = "some-api-key-string"

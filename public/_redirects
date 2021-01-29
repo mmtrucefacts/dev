@@ -1,7 +1,0 @@
-# These rules will change if you change your site’s custom domains or HTTPS settings
-
-# Redirect domain aliases to primary domain
-https://dev.jacebenson.com/* https://dev.jace.pro/:splat 301!
-
-# Optional: Redirect default Netlify subdomain to primary domain
-https://elastic-galileo-350b60.netlify.com/* https://dev.jace.pro/:splat 301!

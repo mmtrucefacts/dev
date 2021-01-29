@@ -5,4 +5,3 @@
   force = true
   [redirects.headers]
     X-From = "Netlify"
-    X-Api-Key = "some-api-key-string"

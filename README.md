@@ -14,11 +14,21 @@ It's purpose it to create a proxy to a site you own.
 
 Depends.  Do you use Netlify DNS? 
 
+You're here because you want to know how.  
+
+## Here's what you'll need.
+
+1.  **Access to your DNS** for the domain.  Either to move to Netlify DNS, or to create appropriate records.
+2.  A **Netlify account**.
+3.  A **Git repository pointing to the proper domain [like this one](https://github.com/jacebenson/dev)**.
+
+You can read the repo's readme, or follow along here.  Also there are at least two other ways to do this.  One is using [ServiceNow's custom URL feature](https://docs.servicenow.com/bundle/paris-platform-administration/page/integrate/authentication/concept/custom-url.html).  The other is some magic on Cloudflare.
+
 ## I use Netlify DNS
 
 1. Copy/Fork/Clone this repo.  
 2. Update the `netlify.toml` file to the site you want.
-3. In netlify, add this repository as a site.
+3. On Netlify, add this repository as a site.
 4. Update the site's domain under "Custom domains" to the domain you want.
 
 (You'll need your DNS set up to Netlify, here's the [docs on that](https://docs.netlify.com/domains-https/netlify-dns/).)
@@ -27,7 +37,7 @@ Depends.  Do you use Netlify DNS?
 
 1. Copy/Fork/Clone this repo.  
 2. Update the `netlify.toml` file to the site you want.
-3. In netlify, add this repository as a site.
+3. On Netlify, add this repository as a site.
 4. Update the site's domain under "Domain mangement=>Custom domains" to the domain you want.
 5. If domain is a subdomain
    1. [On your DNS, add a CNAME record to the site name given in step 3.](https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/)

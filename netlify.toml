@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/navpage.do/*"
-  to = "https://dev16718.service-now.com/stats.do"
+  to = "https://dev16718.service-now.com/nav_to.do?uri=splash.do"
   status = 200
   force = true
   [redirects.headers]

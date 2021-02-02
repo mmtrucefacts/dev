@@ -1,3 +1,11 @@
+[[redirects]]
+  from = "/navpage.do/*"
+  to = "https://dev16718.service-now.com/stats.do"
+  status = 200
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"
+
 # This rule is a catch all
 [[redirects]]
   from = "/*"

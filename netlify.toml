@@ -1,3 +1,19 @@
+[[redirects]]
+  from "/blog/test"
+  to = "https://example.com"
+  status = 200
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"
+
+[[redirects]]
+  from "/blog/*"
+  to = "https://jace.pro/:splat"
+  status = 200
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"
+
 # This rule is a catch all
 [[redirects]]
   from = "/*"

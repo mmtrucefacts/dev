@@ -1,4 +1,4 @@
-# Simple Netlify Proxy 
+# Simple Vercel Proxy 
 
 This is a simple repo.
 
@@ -6,44 +6,26 @@ It's purpose it to create a proxy to a site you own.
 
 ## How does it work?
 
-1.  You have a domain point to Netlify
-2.  Netlify has a "redirect" rule that doesn't redirect instead proxies
+1.  You have a domain point to Vercel
+2.  Vecel has a "redirect/rewrite" rule that doesn't redirect instead proxies
 3.  That's it
 
 ## What do I have to do?
 
-Depends.  Do you use Netlify DNS? 
-
-You're here because you want to know how.  
-
-## Here's what you'll need.
-
-1.  **Access to your DNS** for the domain.  Either to move to Netlify DNS, or to create appropriate records.
-2.  A **Netlify account**.
+1.  **Access to your DNS** for the domain to create appropriate records.
+2.  A **Vercel account**.
 3.  A **Git repository pointing to the proper domain [like this one](https://github.com/jacebenson/dev)**.
 
 You can read the repo's readme, or follow along here.  Also there are at least two other ways to do this.  One is using [ServiceNow's custom URL feature](https://docs.servicenow.com/bundle/paris-platform-administration/page/integrate/authentication/concept/custom-url.html).  The other is some magic on Cloudflare.
 
-## I use Netlify DNS
+## Ok, I'm ready!
 
-1. Copy/Fork/Clone this repo.  
-2. Update the `netlify.toml` file to the site you want.
-3. On Netlify, add this repository as a site.
-4. Update the site's domain under "Custom domains" to the domain you want.
-
-(You'll need your DNS set up to Netlify, here's the [docs on that](https://docs.netlify.com/domains-https/netlify-dns/).)
-
-## I do not use Netlify DNS
-
-1. Copy/Fork/Clone this repo.  
-2. Update the `netlify.toml` file to the site you want.
-3. On Netlify, add this repository as a site.
-4. Update the site's domain under "Domain mangement=>Custom domains" to the domain you want.
-5. If domain is a subdomain
-   1. [On your DNS, add a CNAME record to the site name given in step 3.](https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/)
-6. [If the domain is a apex domain](https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-an-apex-domain)
-   1. If your DNS provider supports CNAME flattening, ANAME, or ALIAS records, set that appropriate type like you would a CNAME record to the site url.
-   2. If your DNS provider doesn't support those special types of records
-      1. Add an `A record` leave host field empty or enter `@`
-      2. Point the record to Netlify's load balancer IP address `104.198.14.52`
-      3. Save your settings
+1. [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fjacebenson%2Fdev)
+2. Goto your git source where that button created the repo.
+3. Update the `./_includes/layout/redirect.njk` file to the site you want.
+4. Vercel should trigger a build and update index.html and 404.html to redirect to your site.
+5. Now you need to set up the domain.  To do that goto "Domains", 
+6. It'll ask what project you want to use, pick the one you made from #1.
+7. It will show you, that your DNS is wrong.  Go forth and set the dns as depicted.
+8. Comeback to Vercel's domain page and "Refresh" your domain entry.  You may need to wait for your DNS to propegate.
+9. That's it.

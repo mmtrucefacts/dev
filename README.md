@@ -21,7 +21,6 @@ You can read the repo's readme, or follow along here.  Also there are at least t
 
 # Ok, I'm ready!
 
-
 ## Deploy the repo
 
 1. [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fjacebenson%2Fdev)

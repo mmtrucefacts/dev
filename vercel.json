@@ -1,5 +1,6 @@
 {
     "rewrites": [
-        { "source": "/:match*", "destination": "https://dev16718.service-now.com/:match*" }      
+        { "source": "/", "destination": "https://dev16718.service-now.com/" },
+        { "source": "/:match*", "destination": "https://dev16718.service-now.com/:match*" }
     ]
   }
